@@ -45,7 +45,7 @@ public class Variables {
 		
 		String nombreCompleto = "Federico Di Iorio";
 		float pesoCorporal = 77.8F;
-		System.out.println("Mi nombre es " + nombreCompleto + "y peso " + pesoCorporal + " kilos");
+		System.out.println("Mi nombre es " + nombreCompleto + " y peso " + pesoCorporal + " kilos");
 
 	}
 
