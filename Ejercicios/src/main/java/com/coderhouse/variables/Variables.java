@@ -37,7 +37,7 @@ public class Variables {
 		//Ejercicio 6
 		
 		byte[] notas = {10, 8, 6, 2, 7};
-		for(byte i = 0; i <notas.length; i++) {
+		for(byte i = 0; i < notas.length; i++) {
 			System.out.println("La nota del alumno número " + i + " es: " + notas[i]);
 		}
 		
