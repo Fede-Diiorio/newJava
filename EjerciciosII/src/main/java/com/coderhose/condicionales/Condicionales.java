@@ -404,6 +404,60 @@ public class Condicionales {
 			break;
 		}
 
+		// Ejercicio 21
+		System.out.println("");
+		System.out.println("Ejercicio 21");
+
+		int ej21 = 24;
+
+		String respuesta21 = ej21 % 2 == 0 ? "El número " + ej21 + " es par." : "El número " + ej21 + " es impar.";
+		System.out.println(respuesta21);
+
+		// Ejercicio 22
+		System.out.println("");
+		System.out.println("Ejercicio 22");
+
+		int ej22 = 24;
+		if (ej22 >= 0) {
+			String respuesta22 = ej22 >= 18 ? "La persona es mayor de edad" : "La persona es menor de edad";
+			System.out.println(respuesta22);
+		} else {
+			System.out.println("Datos inválidos.");
+		}
+
+		// Ejercicio 23
+		System.out.println("");
+		System.out.println("Ejercicio 23");
+
+		int ej23 = 24;
+
+		if (ej23 != 0) {
+			String respuesta23 = ej23 > 0 ? "Positivo" : "Negativo";
+			System.out.println(respuesta23);
+		} else {
+			System.out.println("Neutro");
+		}
+
+		// Ejercicio 24
+		System.out.println("");
+		System.out.println("Ejercicio 24");
+
+		int ej24a = 29;
+		int ej24b = 24;
+		int respuesta24 = ej24a > ej24b ? ej24a : ej24b;
+		System.out.println("El número " + respuesta24 + " el el más grende entre " + ej24a + " y " + ej24b + ".");
+
+		// Ejercicio 25
+		System.out.println("");
+		System.out.println("Ejercicio 25");
+		
+		int nota25 = 10;
+		if(nota25 >=1 && nota25 <= 10) {
+			String respuesta25 = nota25 >= 6 ? "APROBADO" : "REPROBADO";
+			System.out.println("El alumno se encuentra " + respuesta25 + " con: " + nota25);
+		} else {
+			System.out.println("Datos inválidos.");
+		}
 	}
 
 }
