@@ -513,6 +513,139 @@ public class Condicionales {
 		} else {
 			System.out.println("El número " + randomNumber28 + " NO es multiplo de 10.");
 		}
+
+		// Ejercicio 31
+		System.out.println("");
+		System.out.println("Ejercicio 31");
+
+		int ej31 = 0;
+
+		String respuesta31 = ej31 > 0 ? "positivo" : ej31 < 0 ? "negativo" : "neutro";
+
+		System.out.println("El número " + ej31 + " es un número " + respuesta31);
+
+		// Ejercicio 32
+		System.out.println("");
+		System.out.println("Ejercicio 32");
+
+		int semaforo = (int) (Math.random() * 3) + 1;
+
+		switch (semaforo) {
+		case 1:
+			System.out.println("Semaforo en: verde");
+			break;
+		case 2:
+			System.out.println("Semaforo en: amarillo");
+			break;
+		case 3:
+			System.out.println("Semaforo en: rojo");
+			break;
+		}
+
+		// Ejercicio 33
+		System.out.println("");
+		System.out.println("Ejercicio 33");
+
+		int randomEntre1y10 = (int) (Math.random() * 10) + 1;
+		int loteria = 3;
+
+		if (loteria >= 1 && loteria <= 10) {
+			if (randomEntre1y10 == loteria) {
+				System.out.println("¡FELICIDADES!");
+				System.out.println("Número ganador: " + randomEntre1y10);
+				System.out.println("Número elegido: " + loteria);
+			} else {
+				System.out.println("Suerte para la próxima :(");
+				System.out.println("Número ganador: " + randomEntre1y10);
+				System.out.println("Número elegido: " + loteria);
+			}
+		} else {
+			System.out.println("Datos inválidos");
+		}
+
+		// Ejercicio 34
+		System.out.println("");
+		System.out.println("Ejercicio 34");
+
+		int randomEntre1Y100 = (int) (Math.random() * 100) + 1;
+
+		if (randomEntre1Y100 % 3 == 0) {
+			System.out.println("El número " + randomEntre1Y100 + " es divisible por 3.");
+		} else if (randomEntre1Y100 % 5 == 0) {
+			System.out.println("El número " + randomEntre1Y100 + " es divisible por 5.");
+		} else {
+			System.out.println("El número " + randomEntre1Y100 + " no se puede dividir por 3 ni por 5.");
+		}
+
+		// Ejercicio 35
+		System.out.println("");
+		System.out.println("Ejercicio 35");
+
+		if (dadoNumber >= 4) {
+			System.out.println("El dado ha caido en el número " + dadoNumber + ". Has ganado el encuentro");
+		} else {
+			System.out.println("El dado ha caido en el número " + dadoNumber + ". Has perdido el encuentro");
+		}
+
+		// Ejercicio 36
+		System.out.println("");
+		System.out.println("Ejercicio 36");
+
+		if (randomEntre1Y100 < 30) {
+			System.out.println("El número " + randomEntre1Y100 + " es de categoría baja.");
+		} else if (randomEntre1Y100 >= 30 && randomEntre1Y100 <= 70) {
+			System.out.println("El número " + randomEntre1Y100 + " es de categoría media.");
+		} else if (randomEntre1Y100 > 70) {
+			System.out.println("El número " + randomEntre1Y100 + " es de categoría alta.");
+		} else {
+			System.out.println("datos inválidos.");
+		}
+
+		// Ejercicio 37
+		System.out.println("");
+		System.out.println("Ejercicio 37");
+
+		int contador37 = 0;
+
+		for (int i = 1; i <= randomEntre1Y100; i++) {
+			if (randomEntre1Y100 % i == 0) {
+				contador37++;
+			}
+		}
+
+		if (contador37 == 2) {
+			System.out.println("El número " + randomEntre1Y100 + " es un número primo");
+		} else {
+			System.out.println("El número " + randomEntre1Y100 + " NO es un número primo");
+		}
+
+		// Ejercicio 38
+		System.out.println("");
+		System.out.println("Ejercicio 38");
+
+		int adivinar = 6;
+
+		if (adivinar >= 1 && adivinar <= 10) {
+			if (adivinar == randomEntre1y10) {
+				System.out.println("¡Adivinaste!");
+			} else {
+				System.out.println("Más suerte para la próxima.");
+			}
+		} else {
+			System.out.println("Datos inválidos.");
+		}
+
+		// Ejercicio 39
+		System.out.println("");
+		System.out.println("Ejercicio 39");
+
+		int randomEntre1y50 = (int) (Math.random() * 50) + 1;
+		
+		if(randomEntre1y50 >= 20 && randomEntre1y50 <= 30) {
+			System.out.println(randomEntre1y50 + " - Dentro del rango.");
+		} else {
+			System.out.println(randomEntre1y50 + " - Fuera del rango.");
+		}
 	}
 
 }
