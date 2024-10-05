@@ -450,13 +450,68 @@ public class Condicionales {
 		// Ejercicio 25
 		System.out.println("");
 		System.out.println("Ejercicio 25");
-		
+
 		int nota25 = 10;
-		if(nota25 >=1 && nota25 <= 10) {
+		if (nota25 >= 1 && nota25 <= 10) {
 			String respuesta25 = nota25 >= 6 ? "APROBADO" : "REPROBADO";
 			System.out.println("El alumno se encuentra " + respuesta25 + " con: " + nota25);
 		} else {
 			System.out.println("Datos inválidos.");
+		}
+
+		// Ejercicio 26
+		System.out.println("");
+		System.out.println("Ejercicio 26");
+
+		int randomNumber = (int) (Math.random() * 10) + 1;
+
+		if (randomNumber > 5) {
+			System.out.println("El número " + randomNumber + " es mayor que 5.");
+		} else {
+			System.out.println("El número " + randomNumber + " es menor que 5.");
+		}
+
+		// Ejercicio 27
+		System.out.println("");
+		System.out.println("Ejercicio 27");
+
+		byte dadoNumber = (byte) ((byte) (Math.random() * 6) + 1);
+		System.out.println(dadoNumber);
+
+		// Ejercicio 28
+		System.out.println("");
+		System.out.println("Ejercicio 28");
+
+		int randomNumber28 = (int) (Math.random() * 100) + 1;
+
+		if (randomNumber28 > 50) {
+			System.out.println("El número " + randomNumber28 + " es mayor que 50.");
+		} else {
+			System.out.println("El número " + randomNumber28 + " es menor que 50.");
+		}
+
+		// Ejercicio 29
+		System.out.println("");
+		System.out.println("Ejercicio 29");
+
+		byte moneda = (byte) ((byte) (Math.random() * 2) + 1);
+
+		if (moneda == 1) {
+			System.out.println("Cara");
+		} else if (moneda == 2) {
+			System.out.println("Seca");
+		} else {
+			System.out.println("Error");
+		}
+
+		// Ejercicio 30
+		System.out.println("");
+		System.out.println("Ejercicio 30");
+
+		if (randomNumber28 % 10 == 0) {
+			System.out.println("El número " + randomNumber28 + " es multiplo de 10.");
+		} else {
+			System.out.println("El número " + randomNumber28 + " NO es multiplo de 10.");
 		}
 	}
 
