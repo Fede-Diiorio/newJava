@@ -1,5 +1,8 @@
 package com.coderhouse;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class MathEj {
 
 	public static void main(String[] args) {
@@ -61,6 +64,100 @@ public class MathEj {
 		} else {
 			System.out.println("El número es cero.");
 		}
+
+		// Ejercicio 96
+		System.out.println("");
+		System.out.println("Ejercicio 96");
+
+		int dado2 = (int) (Math.random() * 6) + 1;
+
+		if (dado + dado2 > 7) {
+			System.out.println("Dado 1: " + dado);
+			System.out.println("Dado 2: " + dado2);
+			System.out.println("Total: " + (dado + dado2));
+		} else {
+			System.out.println("Dado 1: " + dado);
+			System.out.println("Dado 2: " + dado2);
+		}
+
+		// Ejercicio 97
+		System.out.println("");
+		System.out.println("Ejercicio 97");
+
+		List<Integer> ListaDeEnterosRandom = new ArrayList<>();
+
+		int random1 = (int) (Math.random() * 100) + 1;
+		int random2 = (int) (Math.random() * 100) + 1;
+		int random3 = (int) (Math.random() * 100) + 1;
+		int random4 = (int) (Math.random() * 100) + 1;
+		int random5 = (int) (Math.random() * 100) + 1;
+		int random6 = (int) (Math.random() * 100) + 1;
+		int random7 = (int) (Math.random() * 100) + 1;
+		int random8 = (int) (Math.random() * 100) + 1;
+		int random9 = (int) (Math.random() * 100) + 1;
+		int random10 = (int) (Math.random() * 100) + 1;
+
+		ListaDeEnterosRandom.add(random1);
+		ListaDeEnterosRandom.add(random2);
+		ListaDeEnterosRandom.add(random3);
+		ListaDeEnterosRandom.add(random4);
+		ListaDeEnterosRandom.add(random5);
+		ListaDeEnterosRandom.add(random6);
+		ListaDeEnterosRandom.add(random7);
+		ListaDeEnterosRandom.add(random8);
+		ListaDeEnterosRandom.add(random9);
+		ListaDeEnterosRandom.add(random10);
+
+		System.out.println(ListaDeEnterosRandom);
+
+		int buscador = ListaDeEnterosRandom.getFirst();
+
+		for (int numero : ListaDeEnterosRandom) {
+			if (buscador < numero) {
+				buscador = numero;
+			}
+		}
+
+		System.out.println("El número más grande es: " + buscador);
+
+		// Ejercicio 98
+		System.out.println("");
+		System.out.println("Ejercicio 98");
+
+		int randomEntre1y50 = (int) (Math.random() * 50) + 1;
+
+		if (randomEntre1y50 >= 10 && randomEntre1y50 <= 20) {
+			System.out.println("El número " + randomEntre1y50 + " se encuentra en el rango.");
+		} else {
+			System.out.println("Número: " + randomEntre1y50);
+		}
+
+		// Ejercicio 99
+		System.out.println("");
+		System.out.println("Ejercicio 99");
+
+		int adivinado = 24;
+
+		if (randomEntre1y50 == adivinado) {
+			System.out.println("Increiblemente la pegaste: " + randomEntre1y50);
+		} else {
+			System.out.println("No le diste: " + randomEntre1y50);
+		}
+
+		// Ejercicio 99
+		System.out.println("");
+		System.out.println("Ejercicio 99");
+
+		int contador = 0; 
+		int randomNumber2; 
+
+		do {
+			randomNumber2 = (int) (Math.random() * 100) + 1; 
+			contador++; 
+			System.out.println("Intento " + contador + ": " + randomNumber2); 
+		} while (randomNumber2 % 7 != 0);
+
+		System.out.println("Se necesitó " + contador + " intentos para encontrar un número divisible por 7.");
 	}
 
 }
