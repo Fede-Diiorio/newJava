@@ -107,6 +107,102 @@ public class IteratorEj {
 		}
 		System.out.println(arregloDeCadenaPrimario);
 
+		// Ejercicio 36
+		System.out.println("");
+		System.out.println("Ejercicio 36");
+
+		iteratorInteger = arregloDeEnterosPrimario.iterator();
+		contador = 0;
+
+		while (iteratorInteger.hasNext()) {
+			iteratorInteger.next();
+			contador++;
+		}
+
+		if (contador == arregloDeEnterosPrimario.size()) {
+			System.out.println("Todo correcto");
+			System.out.println(contador);
+		} else {
+			System.out.println(contador);
+		}
+
+		// Ejercicio 37
+		System.out.println("");
+		System.out.println("Ejercicio 37");
+
+		arregloDeEnterosPrimario.add(55);
+		arregloDeEnterosPrimario.add(81);
+
+		iteratorInteger = arregloDeEnterosPrimario.iterator();
+
+		while (iteratorInteger.hasNext()) {
+			int ayudante = iteratorInteger.next();
+			if (ayudante > 50) {
+				System.out.println(ayudante);
+			}
+		}
+
+		// Ejercicio 38
+		System.out.println("");
+		System.out.println("Ejercicio 38");
+
+		System.out.println(arregloDeEnterosPrimario);
+
+		iteratorInteger = arregloDeEnterosPrimario.iterator();
+
+		int index = 0;
+
+		while (iteratorInteger.hasNext()) {
+			int valor = iteratorInteger.next();
+			arregloDeEnterosPrimario.set(index, valor * 2);
+			index++;
+		}
+		System.out.println(arregloDeEnterosPrimario);
+
+		// Ejercicio 39
+		System.out.println("");
+		System.out.println("Ejercicio 39");
+
+		arregloDeEnterosPrimario.add(-55);
+		arregloDeEnterosPrimario.add(-81);
+
+		System.out.println(arregloDeEnterosPrimario);
+
+		iteratorInteger = arregloDeEnterosPrimario.iterator();
+
+		int ayudante;
+
+		while (iteratorInteger.hasNext()) {
+			ayudante = iteratorInteger.next();
+
+			if (ayudante < 0) {
+				iteratorInteger.remove();
+			}
+		}
+
+		System.out.println(arregloDeEnterosPrimario);
+
+		// Ejercicio 40
+		System.out.println("");
+		System.out.println("Ejercicio 40");
+
+		List<String> listaDePalabras = new ArrayList<>();
+		listaDePalabras.add("sol");
+		listaDePalabras.add("cielo");
+		listaDePalabras.add("a");
+		listaDePalabras.add("luz");
+		listaDePalabras.add("mar");
+
+		Iterator<String> iterator = listaDePalabras.iterator();
+
+		while (iterator.hasNext()) {
+			String palabra = iterator.next();
+			if (palabra.length() < 3) {
+				iterator.remove(); 
+			}
+		}
+
+		System.out.println(listaDePalabras);
 	}
 
 }

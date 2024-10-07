@@ -144,9 +144,9 @@ public class MathEj {
 			System.out.println("No le diste: " + randomEntre1y50);
 		}
 
-		// Ejercicio 99
+		// Ejercicio 100
 		System.out.println("");
-		System.out.println("Ejercicio 99");
+		System.out.println("Ejercicio 100");
 
 		int contador = 0; 
 		int randomNumber2; 
