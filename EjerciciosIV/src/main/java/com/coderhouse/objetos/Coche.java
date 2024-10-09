@@ -42,7 +42,7 @@ public class Coche {
 	}
 
 	public void setAnio(int anio) throws Exception {
-		if (anio < ANIO_ACTUAL || anio > ANIO_ACTUAL) {
+		if (anio < ANIO_MINIMO || anio > ANIO_ACTUAL) {
 			throw new Exception(mensajeDeError);
 		} else {
 			this.anio = anio;
