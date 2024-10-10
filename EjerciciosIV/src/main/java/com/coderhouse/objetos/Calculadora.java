@@ -29,6 +29,12 @@ public class Calculadora {
 		System.out.println("Resultado de la suma: " + (getNumero1() + getNumero2()));
 	}
 
+	public void sumarLocal(int numero1, int numero2) {
+		System.out.println("Número 1: " + numero1);
+		System.out.println("Número 2: " + numero2);
+		System.out.println("Resultado de la suma: " + (numero1 + numero2));
+	}
+
 	public void restar() {
 		System.out.println("Número 1: " + getNumero1());
 		System.out.println("Número 2: " + getNumero2());
@@ -36,8 +42,9 @@ public class Calculadora {
 	}
 
 	public void multiplicar() {
+		String cartel = "Resultado de la multiplicación: ";
 		System.out.println("Número 1: " + getNumero1());
 		System.out.println("Número 2: " + getNumero2());
-		System.out.println("Resultado de la multiplicación: " + (getNumero1() * getNumero2()));
+		System.out.println(cartel + (getNumero1() * getNumero2()));
 	}
 }

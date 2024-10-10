@@ -32,11 +32,21 @@ public class Rectangulo {
 	public void setAltura(int altura) {
 		this.altura = altura;
 	}
-	
+
 	public void calcularArea() throws Exception {
 		System.out.println("Base: " + getBase());
 		System.out.println("Altura: " + getAltura());
 		System.out.println("El area del rectangulo es: " + (getAltura() * getBase()));
+	}
+
+	public void calcularAreaLocal(int base, int altura) throws Exception {
+		if (base <= 0 || altura <= 0) {
+			throw new Exception(errorDeDato);
+		} else {
+			System.out.println("Base: " + base);
+			System.out.println("Altura: " + altura);
+			System.out.println("El area del rectángulo es: " + (base * altura));
+		}
 	}
 
 }

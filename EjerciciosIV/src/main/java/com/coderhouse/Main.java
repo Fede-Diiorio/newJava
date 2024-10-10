@@ -33,14 +33,14 @@ public class Main {
 		calc1.setNumero1(10);
 		calc1.setNumero2(5);
 		calc1.sumar();
-		
+
 		System.out.println("");
 		System.out.println("----------");
 		System.out.println("");
 		Vehiculo auto1 = new Vehiculo();
 		auto1.setConsumoCada100km(5);
 		auto1.calcularCombustible(78);
-		
+
 		System.out.println("");
 		System.out.println("----------");
 		System.out.println("");
@@ -48,6 +48,13 @@ public class Main {
 		triangulo.setBase(10);
 		triangulo.setAltura(5);
 		triangulo.calcularArea();
+
+		System.out.println("");
+		System.out.println("----------");
+		System.out.println("");
+		Persona persona1 = new Persona();
+		persona1.calcularEdad(1795);
+		
 	}
 
 }

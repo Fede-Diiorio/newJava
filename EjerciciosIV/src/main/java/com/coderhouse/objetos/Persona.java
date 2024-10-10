@@ -5,9 +5,12 @@ public class Persona {
 	// Constantes
 	private static final int EDAD_MINIMA = 0;
 	private static final int EDAD_MAXIMA = 120;
+	private static final int ANIO_ACTUAL = 2024;
 
-	String mensajeDeError = "La edad no puede ser menor a " + EDAD_MINIMA + " y tampoco puede ser mayor de "
+	private String errorConLaEdad = "La edad no puede ser menor a " + EDAD_MINIMA + " y tampoco puede ser mayor de "
 			+ EDAD_MAXIMA;
+
+	private String casteo = " ha casteado un hechizo.";
 
 	// Atributos o variables de clase
 	private String nombre;
@@ -29,7 +32,7 @@ public class Persona {
 	// Métodos
 	public void setEdad(int edad) throws Exception {
 		if (edad < EDAD_MINIMA || edad > EDAD_MAXIMA) {
-			throw new Exception(mensajeDeError);
+			throw new Exception(errorConLaEdad);
 		} else {
 			this.edad = edad;
 		}
@@ -48,6 +51,24 @@ public class Persona {
 			System.out.println(getNombre() + " es mayor de edad.");
 		} else {
 			System.out.println(getNombre() + " NO es mayor de edad.");
+		}
+	}
+
+	public void castearHechizo() {
+		System.out.println(getNombre() + casteo);
+	}
+
+	public void calcularEdad(int anioDeNacimiento) throws Exception {
+		String errorDeAnio = "No puede ingresar un año superior al año actual o un año negativo.";
+		if (anioDeNacimiento > ANIO_ACTUAL || anioDeNacimiento < 0) {
+			throw new Exception(errorDeAnio);
+		} else {
+			int edad = ANIO_ACTUAL - anioDeNacimiento;
+			if (edad > EDAD_MAXIMA) {
+				throw new Exception(errorConLaEdad);
+			} else {
+				System.out.println("Usted tiene " + edad + " años de edad.");
+			}
 		}
 	}
 }

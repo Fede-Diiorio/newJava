@@ -5,6 +5,9 @@ public class CuentaBancaria {
 	private float saldo;
 	private String titular;
 
+	// Estáticas
+	private static final int INTERES_NOMINAL_ANUAL = 16;
+
 	// Getters y Setters
 	public float getSaldo() {
 		return saldo;
@@ -31,6 +34,12 @@ public class CuentaBancaria {
 
 	public void imprimirDatos() {
 		System.out.println("El saldo de " + getTitular() + " es de: " + getSaldo());
+	}
+
+	public void calcularInteresDeEsteMes() {
+		float interesDeUnMes = (INTERES_NOMINAL_ANUAL / 12f) / 100;
+		float calculoDeIntereses = getSaldo() + (getSaldo() * interesDeUnMes);
+		System.out.println("Estimado " + getTitular() + ", a final del més usted contará con: $" + calculoDeIntereses);
 	}
 
 }
