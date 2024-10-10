@@ -2,12 +2,10 @@ package com.coderhouse.objetos;
 
 public class Contador {
 
-	// Variable estática
 	private static int contadorObjetos = 0;
 
-	// Constructor de la clase
 	public Contador() {
-		contadorObjetos++;
+		contadorObjetos++; // Cada vez que se crea un objeto, aumenta el contador
 	}
 
 	public static int getContadorObjetos() {
