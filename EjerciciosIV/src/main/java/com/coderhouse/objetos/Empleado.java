@@ -6,6 +6,10 @@ public class Empleado {
 	private String nombre;
 	private int sueldo;
 
+	// Constates
+	private static final int SALARIO_MINIMO = 2000;
+	private static final int HORAS_TRABAJO = 192; // Cada mes
+
 	// Get y Set
 	public String getNombre() {
 		return this.nombre;
@@ -28,10 +32,23 @@ public class Empleado {
 		}
 	}
 
+	public void validarSueldo() {
+		if (SALARIO_MINIMO < getSueldo()) {
+			System.out.println("Tu salario está aprobado por los cruzados de Miller.");
+		} else {
+			System.out.println("Deberías pedir un aumento.");
+		}
+	}
+
 	// Métodos
 	public void calcularSueldoAnual() {
 		int calcularAnual = getSueldo() * 12;
 		System.out.println("El sueldo anual de " + getNombre() + " es de: $" + calcularAnual);
+	}
+
+	public void calcularSueldoSemanal() {
+		int calcularSemanal = 48 * getSueldo() / HORAS_TRABAJO;
+		System.out.println("El sueldo semanal de " + getNombre() + " es de: $" + calcularSemanal);
 	}
 
 }

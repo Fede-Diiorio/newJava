@@ -48,13 +48,15 @@ public class Main {
 		triangulo.setBase(10);
 		triangulo.setAltura(5);
 		triangulo.calcularArea();
-
+		
 		System.out.println("");
 		System.out.println("----------");
 		System.out.println("");
-		Persona persona1 = new Persona();
-		persona1.calcularEdad(1795);
+		Tienda tienda = new Tienda();
+		tienda.setTotalDeCompra(100);
+		tienda.calcularPrecioFinal();;
 		
+
 	}
 
 }

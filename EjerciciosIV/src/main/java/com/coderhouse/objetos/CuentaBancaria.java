@@ -10,7 +10,7 @@ public class CuentaBancaria {
 
 	// Getters y Setters
 	public float getSaldo() {
-		return saldo;
+		return this.saldo;
 	}
 
 	public void setSaldo(float saldo) throws Exception {
@@ -23,7 +23,7 @@ public class CuentaBancaria {
 	}
 
 	public String getTitular() {
-		return titular;
+		return this.titular;
 	}
 
 	public void setTitular(String titular) {
@@ -40,6 +40,10 @@ public class CuentaBancaria {
 		float interesDeUnMes = (INTERES_NOMINAL_ANUAL / 12f) / 100;
 		float calculoDeIntereses = getSaldo() + (getSaldo() * interesDeUnMes);
 		System.out.println("Estimado " + getTitular() + ", a final del més usted contará con: $" + calculoDeIntereses);
+	}
+
+	public void mostrarSaldo() {
+		System.out.println("Su saldo es de: $" + getSaldo());
 	}
 
 }
