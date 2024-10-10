@@ -59,7 +59,13 @@ public class Main {
 		System.out.println("");
 		System.out.println("----------");
 		System.out.println("");
+		CuentaBancaria cuenta = new CuentaBancaria();
+		cuenta.setSaldo(100);
+		cuenta.setTitular("Diyo");
+		cuenta.calcularInteresDeEsteMes();
 
+		float resultado = cuenta.calcularInteresParaUnMes(100);
+		System.out.println("Resultado: " + resultado);
 	}
 
 }

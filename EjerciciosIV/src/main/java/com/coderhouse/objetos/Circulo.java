@@ -35,10 +35,19 @@ public class Circulo {
 			this.diametro = diametro;
 		}
 	}
-	
+
 	public void calcularArea() {
 		float area = PI * getRadio() * getRadio();
 		System.out.println("El area del ciruclo mide: " + area);
 	}
- 
+
+	public static float calcularArea(int radio) throws Exception {
+		String error = "El radio tiene que se mayor a 0.";
+		if (radio <= 0) {
+			throw new Exception(error);
+		} else {
+			return PI * (radio * radio);
+		}
+	}
+
 }

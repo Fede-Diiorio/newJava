@@ -46,4 +46,14 @@ public class CuentaBancaria {
 		System.out.println("Su saldo es de: $" + getSaldo());
 	}
 
+	public static float calcularInteresParaUnMes(float dinero) throws Exception {
+		String error = "La cantidad de dinero ingresada debe ser mayor a 0.";
+		if (dinero < 0) {
+			throw new Exception(error);
+		} else {
+			float interesDeUnMes = (INTERES_NOMINAL_ANUAL / 12f) / 100;
+			return dinero + (dinero * interesDeUnMes);
+		}
+	}
+
 }
