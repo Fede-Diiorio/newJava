@@ -1,7 +1,6 @@
 package com.coderhouse;
 
-import com.coderhouse.objetos.Alumno;
-import com.coderhouse.objetos.Coche;
+import com.coderhouse.objetos.*;
 
 public class Main {
 
@@ -24,7 +23,31 @@ public class Main {
 		alumno1.setMatricula(3829);
 		alumno1.setPromedio(10);
 		alumno1.imprimirDatos();
+		alumno1.setPromedioDeNotas(6, 7, 10);
+		alumno1.calcularPromedioDeNotas();
 
+		System.out.println("");
+		System.out.println("----------");
+		System.out.println("");
+		Calculadora calc1 = new Calculadora();
+		calc1.setNumero1(10);
+		calc1.setNumero2(5);
+		calc1.sumar();
+		
+		System.out.println("");
+		System.out.println("----------");
+		System.out.println("");
+		Vehiculo auto1 = new Vehiculo();
+		auto1.setConsumoCada100km(5);
+		auto1.calcularCombustible(78);
+		
+		System.out.println("");
+		System.out.println("----------");
+		System.out.println("");
+		Triangulo triangulo = new Triangulo();
+		triangulo.setBase(10);
+		triangulo.setAltura(5);
+		triangulo.calcularArea();
 	}
 
 }

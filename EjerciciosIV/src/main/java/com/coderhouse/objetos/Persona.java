@@ -13,19 +13,6 @@ public class Persona {
 	private String nombre;
 	private int edad;
 
-	// Métodos
-	public void setEdad(int edad) throws Exception {
-		if (edad < EDAD_MINIMA || edad > EDAD_MAXIMA) {
-			throw new Exception(mensajeDeError);
-		} else {
-			this.edad = edad;
-		}
-	}
-
-	public void imprimirDatos() {
-		System.out.println("La persona se llama " + getNombre() + " y tiene " + getEdad() + " años de edad.");
-	}
-
 	// Getters y Setters
 	public String getNombre() {
 		return this.nombre;
@@ -39,4 +26,28 @@ public class Persona {
 		return this.edad;
 	}
 
+	// Métodos
+	public void setEdad(int edad) throws Exception {
+		if (edad < EDAD_MINIMA || edad > EDAD_MAXIMA) {
+			throw new Exception(mensajeDeError);
+		} else {
+			this.edad = edad;
+		}
+	}
+
+	public void imprimirDatos() {
+		System.out.println("La persona se llama " + getNombre() + " y tiene " + getEdad() + " años de edad.");
+	}
+
+	public void saludar() {
+		System.out.println(getNombre() + " te manda un saludo.");
+	}
+
+	public void esMayorDeEdad() {
+		if (getEdad() >= 18) {
+			System.out.println(getNombre() + " es mayor de edad.");
+		} else {
+			System.out.println(getNombre() + " NO es mayor de edad.");
+		}
+	}
 }
