@@ -3,7 +3,6 @@ package com.coderhouse.objetos;
 public class Tienda {
 
 	// Atributos
-
 	private float totalDeCompra;
 
 	// Constante
@@ -34,5 +33,17 @@ public class Tienda {
 		System.out.println("Total de compra: $" + getTotalDeCompra());
 		System.out.println("Precio con descuento: $" + precioFinal);
 		System.out.println("Final + IVA: $ " + (precioFinal + calcularIva));
+	}
+
+	public void calcularDescuento(int precio, int porcentajeDeDescuento) throws Exception {
+		String mensajeDeError = "Tiene que ingresar un porcentaje de descuento entre 0 y 100.";
+		if (porcentajeDeDescuento < 0 || porcentajeDeDescuento > 100) {
+			throw new Exception(mensajeDeError);
+		} else {
+			float descuento = (100 - porcentajeDeDescuento) / 100f;
+			float precioFinal = precio * descuento;
+			System.out.println("Producto sin descuento: $" + precio);
+			System.out.println("Producto con %" + porcentajeDeDescuento + ": $" + precioFinal);
+		}
 	}
 }

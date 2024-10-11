@@ -71,4 +71,17 @@ public class Persona {
 			}
 		}
 	}
+
+	public void imprimirNombre(String nombre) {
+		System.out.println("La persona se llama " + nombre);
+	}
+
+	public boolean esMayorDeEdad(int edad) throws Exception {
+		if (edad < EDAD_MINIMA || edad > EDAD_MAXIMA) {
+			throw new Exception(errorConLaEdad);
+		} else {
+			return edad >= 18;
+		}
+	}
+
 }

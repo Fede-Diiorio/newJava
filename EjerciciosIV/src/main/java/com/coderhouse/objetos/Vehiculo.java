@@ -77,4 +77,17 @@ public class Vehiculo {
 					"Para recorrer " + distancia + " km necesita " + calculoDeConsumo + " litros de combustible.");
 		}
 	}
+
+	public void calcularCombustible2(int distancia, int consumo) throws Exception {
+		String errorDeConsumo = "El consumo no puede ser 0 o inferior a 0. Nosotros nos regimos con las leyes de la termodinamica.";
+		if (consumo <= 0) {
+			throw new Exception(errorDeConsumo);
+		} else {
+			int distanciaReal = Math.abs(distancia);
+			int consumoTotal = distanciaReal * consumo;
+
+			System.out.println("En una distancia de " + distanciaReal + " km, el vihículo gastó " + consumoTotal
+					+ " litros de combustible.");
+		}
+	}
 }
