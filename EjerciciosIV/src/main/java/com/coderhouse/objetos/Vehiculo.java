@@ -67,6 +67,11 @@ public class Vehiculo {
 		}
 	}
 
+	public void frenar() throws Exception {
+		setVelocidad(0);
+		System.out.println("El auto ahora se encuentra detenido.");
+	}
+
 	public void calcularCombustible(int distancia) throws Exception {
 		String sinDistancia = "La distancia debe ser mayor a 0.";
 		if (distancia < 0) {
@@ -88,6 +93,21 @@ public class Vehiculo {
 
 			System.out.println("En una distancia de " + distanciaReal + " km, el vihículo gastó " + consumoTotal
 					+ " litros de combustible.");
+		}
+	}
+
+	public int calcularCombustibleReturn(int distancia, int consumo) throws Exception {
+		String errorDeConsumo = "El consumo no puede ser 0 o inferior a 0. Nosotros nos regimos con las leyes de la termodinamica.";
+		if (consumo <= 0) {
+			throw new Exception(errorDeConsumo);
+		} else {
+			int distanciaReal = Math.abs(distancia);
+			int consumoTotal = distanciaReal * consumo;
+
+			System.out.println("En una distancia de " + distanciaReal + " km, el vihículo gastó " + consumoTotal
+					+ " litros de combustible.");
+
+			return consumoTotal;
 		}
 	}
 }

@@ -49,4 +49,16 @@ public class Rectangulo {
 		}
 	}
 
+	public double calcularAreaDouble(int base, int altura) throws Exception {
+		if (base <= 0 || altura <= 0) {
+			throw new Exception(errorDeDato);
+		} else {
+			System.out.println("Base: " + base);
+			System.out.println("Altura: " + altura);
+			System.out.println("El area del rectángulo es: " + (base * altura));
+			double area = base * altura;
+			return area;
+		}
+	}
+
 }

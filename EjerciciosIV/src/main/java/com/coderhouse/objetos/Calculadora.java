@@ -48,6 +48,18 @@ public class Calculadora {
 		System.out.println(cartel + (getNumero1() * getNumero2()));
 	}
 
+	public void dividir() throws Exception {
+		String cartel = "Resultado de la división: ";
+		String error = "El número 2 no tiene que ser diferente de 0";
+		System.out.println("Número 1: " + getNumero1());
+		System.out.println("Número 2: " + getNumero2());
+		if (getNumero2() == 0) {
+			throw new Exception(error);
+		} else {
+			System.out.println(cartel + (getNumero1() / getNumero2()));
+		}
+	}
+
 	public static int sumar(int numero1, int numero2) {
 		return numero1 + numero2;
 	}
@@ -55,7 +67,7 @@ public class Calculadora {
 	public static int restar(int numero1, int numero2) {
 		return numero1 - numero2;
 	}
-	
+
 	public static int multiplicar(int numero1, int numero2) {
 		return numero1 * numero2;
 	}

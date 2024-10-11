@@ -67,17 +67,30 @@ public class Alumno {
 		System.out.println("El alumno " + getNombre() + ", matrícula número " + getMatricula()
 				+ " tiene un promedio de: " + getPromedio() + ".");
 	}
-	
+
 	public void calcularPromedioDeNotas() {
 		int i = 1;
 		float sumarTodasLasNotas = 0f;
-		
-		for(int numero : promedioDeNotas) {
+
+		for (int numero : promedioDeNotas) {
 			System.out.println("Nota Nº " + i + ": " + numero);
 			i++;
 			sumarTodasLasNotas += numero;
 		}
-		
-		System.out.println("El promedio del estudiante es: " +(sumarTodasLasNotas / promedioDeNotas.size()));
+
+		System.out.println("El promedio del estudiante es: " + (sumarTodasLasNotas / promedioDeNotas.size()));
+	}
+
+	public double calcularPromedioDeNotasReturn() {
+		int i = 1;
+		double sumarTodasLasNotas = 0d;
+
+		for (int numero : promedioDeNotas) {
+			System.out.println("Nota Nº " + i + ": " + numero);
+			i++;
+			sumarTodasLasNotas += numero;
+		}
+
+		return sumarTodasLasNotas / promedioDeNotas.size();
 	}
 }

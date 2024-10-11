@@ -72,6 +72,20 @@ public class Persona {
 		}
 	}
 
+	public int calcularEdadReturn(int anioDeNacimiento) throws Exception {
+		String errorDeAnio = "No puede ingresar un año superior al año actual o un año negativo.";
+		if (anioDeNacimiento > ANIO_ACTUAL || anioDeNacimiento < 0) {
+			throw new Exception(errorDeAnio);
+		} else {
+			int edad = ANIO_ACTUAL - anioDeNacimiento;
+			if (edad > EDAD_MAXIMA) {
+				throw new Exception(errorConLaEdad);
+			} else {
+				return edad;
+			}
+		}
+	}
+
 	public void imprimirNombre(String nombre) {
 		System.out.println("La persona se llama " + nombre);
 	}
