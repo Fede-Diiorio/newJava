@@ -27,4 +27,8 @@ public class Empleado {
 			this.sueldo = sueldo;
 		}
 	}
+	
+	public void trabajar() {
+		System.out.println(getEmpleado() + "está laburando como loco.");
+	}
 }
