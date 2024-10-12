@@ -15,7 +15,6 @@ public class Serpierte extends Reptil {
 	}
 
 	@Override
-
 	public void reptar() {
 		System.out.println(getNombre() + " está reptando amenazantemente.");
 	}

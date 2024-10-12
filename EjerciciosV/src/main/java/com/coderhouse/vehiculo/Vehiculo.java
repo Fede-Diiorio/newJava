@@ -47,6 +47,10 @@ public class Vehiculo {
 	}
 	
 	public void acelerar() {
-		System.out.println("El vehiculo está acelerando.");
+		System.out.println("El vehículo está acelerando.");
+	}
+	
+	public void frenar() {
+		System.out.println("El vehículo se ha detenido.");
 	}
 }

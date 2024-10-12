@@ -7,6 +7,7 @@ public class Perro extends Animal {
 		System.out.println(getNombre() + " está ladrando.");
 	}
 
+	@Override
 	public void alimentarse() {
 		System.out.println(getNombre() + " está comiendo alimento Sieger.");
 	}

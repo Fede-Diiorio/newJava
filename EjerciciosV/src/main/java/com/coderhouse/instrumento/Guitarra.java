@@ -17,6 +17,6 @@ public class Guitarra extends Instrumento {
 
 	@Override
 	public void tocar() {
-		System.out.println("La guitarra " + getTipoDeGuitarra() + " está tocando arpegios.");
+		System.out.println("La guitarra " + getTipoDeGuitarra() + " está tocando una sucesión de acordes.");
 	}
 }
