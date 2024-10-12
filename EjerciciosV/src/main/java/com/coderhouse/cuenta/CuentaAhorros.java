@@ -1,6 +1,6 @@
 package com.coderhouse.cuenta;
 
-public class CuentaAhorros extends Cuenta {
+public class CuentaAhorros extends CuentaBancaria {
 
 	// Constantes
 	private static final int INTERES_NOMINAL_ANUAL = 16;

@@ -12,29 +12,16 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 
-		Portatil portatil = new Portatil();
-		Escritorio escritorio = new Escritorio();
-		Computadora compu = new Computadora();
+		CuentaBancaria cuenta = new CuentaBancaria();
+		cuenta.setTitular("Juan Perez");
+		cuenta.setNumeroCuenta(12345);
+		cuenta.depositar(1000);
 
-		compu.encender();
-		portatil.encender();
-		escritorio.encender();
-
-		CuentaAhorros cuentaAhorro = new CuentaAhorros();
-
-		cuentaAhorro.setSaldo(900);
-		cuentaAhorro.setTitular("Fede Di Iorio");
-		cuentaAhorro.depositar(100);
-		cuentaAhorro.getSaldo();
-		cuentaAhorro.calcularInteresMensual();
-		cuentaAhorro.depositar(100);
-		cuentaAhorro.calcularInteresMensual();
-
-		System.out.println("");
-		Guitarra guitarra = new Guitarra();
-		Piano piano = new Piano();
-		guitarra.afinar();
-		piano.afinar();
+		try {
+			cuenta.retirar(1200); 
+		} catch (SaldoInsuficienteException e) {
+			System.out.println(e.getMessage());
+		}
 
 	}
 

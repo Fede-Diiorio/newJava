@@ -2,25 +2,23 @@ package com.coderhouse.cuenta;
 
 import java.util.Objects;
 
-import com.coderhouse.persona.Persona;
-
-public class Cuenta {
+public class CuentaBancaria {
 
 	// Atributos
 	private double saldo;
 	private String titular;
 	private int numeroCuenta;
 
-	String mensajeDeError = "No puede ingresar un número menor a 0.";
+	private static final String MENSAJE_ERROR_SALDO  = "No puede ingresar un número menor a 0.";
 
 	// GET y SET
 	public double getSaldo() {
 		return saldo;
 	}
 
-	public void setSaldo(double saldo) throws Exception {
+	public void setSaldo(double saldo) {
 		if (saldo < 0) {
-			throw new Exception(mensajeDeError);
+			throw new IllegalArgumentException(MENSAJE_ERROR_SALDO );
 		} else {
 			this.saldo = saldo;
 		}
@@ -30,9 +28,9 @@ public class Cuenta {
 		return numeroCuenta;
 	}
 
-	public void setNumeroCuenta(int numeroCuenta) throws Exception {
+	public void setNumeroCuenta(int numeroCuenta) {
 		if (numeroCuenta <= 0) {
-			throw new Exception(mensajeDeError);
+			throw new IllegalArgumentException(MENSAJE_ERROR_SALDO );
 		} else {
 			this.numeroCuenta = numeroCuenta;
 		}
@@ -47,13 +45,22 @@ public class Cuenta {
 	}
 
 	// Métodos
-	public void depositar(int deposito) throws Exception {
+	public void depositar(int deposito) {
 		if (deposito < 0) {
-			throw new Exception(mensajeDeError);
+			throw new IllegalArgumentException(MENSAJE_ERROR_SALDO );
 		} else {
 			double total = getSaldo() + deposito;
 			setSaldo(total);
 			System.out.println("Su saldo es de: $" + getSaldo());
+		}
+	}
+
+	public void retirar(int retiro) {
+		if (retiro > getSaldo()) {
+			throw new SaldoInsuficienteException("No se puede realizar la operación");
+		} else {
+			double nuevoSaldo = getSaldo() - retiro;
+			setSaldo(nuevoSaldo);
 		}
 	}
 
@@ -65,7 +72,7 @@ public class Cuenta {
 		if (obj == null || getClass() != obj.getClass()) {
 			return false;
 		}
-		Cuenta cuenta = (Cuenta) obj;
+		CuentaBancaria cuenta = (CuentaBancaria) obj;
 		return numeroCuenta == cuenta.numeroCuenta;
 	}
 
