@@ -1,36 +1,68 @@
 package com.coderhouse.persona;
 
+import java.util.Objects;
+
 public class Persona {
 
-	// Atriburos
-	private String nombre;
-	private int edad;
+    // Atributos
+    private String nombre;
+    private int edad;
+    private int dni;
 
-	// Get y Set
-	public String getNombre() {
-		return nombre;
-	}
+    private String mensajeDeError = "Tiene que ingresar un valor mayor a 0.";
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+    // Get y Set
+    public String getNombre() {
+        return nombre;
+    }
 
-	public int getEdad() {
-		return edad;
-	}
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-	public void setEdad(int edad) throws Exception {
-		String errorDeEdad = "La idad no puede ser menor a 0.";
-		if (edad < 0) {
-			throw new Exception(errorDeEdad);
-		} else {
-			this.edad = edad;
-		}
-	}
+    public int getDni() {
+        return dni;
+    }
 
-	// Métodos
-	public void trabajar() {
-		System.out.println(getNombre() + " está trabajando.");
-	}
+    public void setDni(int dni) throws Exception {
+        if (dni <= 0) {
+            throw new Exception(mensajeDeError);
+        } else {
+            this.dni = dni;
+        }
+    }
 
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) throws Exception {
+        if (edad < 0) {
+            throw new Exception(mensajeDeError);
+        } else {
+            this.edad = edad;
+        }
+    }
+
+    // Métodos
+    public void trabajar() {
+        System.out.println(getNombre() + " está trabajando.");
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Persona persona = (Persona) obj;
+        return dni == persona.dni;  
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dni);  
+    }
 }

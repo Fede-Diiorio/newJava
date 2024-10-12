@@ -2,6 +2,7 @@ package com.coderhouse;
 
 import com.coderhouse.computadora.*;
 import com.coderhouse.instrumento.*;
+import com.coderhouse.persona.Estudiante;
 import com.coderhouse.vehiculo.Moto;
 import com.coderhouse.cuenta.*;
 import com.coderhouse.electrodomestico.Microondas;
