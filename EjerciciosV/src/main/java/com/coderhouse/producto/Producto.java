@@ -45,6 +45,15 @@ public class Producto {
 		}
 	}
 
+	public void aplicarDescuento(int porcentajeDeDescuento) {
+		if (porcentajeDeDescuento < 0) {
+			throw new DescuentoInvalidoException(mensajeDeError);
+		} else {
+			double puntoDeDescuento = (100 - porcentajeDeDescuento) / 100d;
+			System.out.println("El precio final es: " + (getPrecioBase() * puntoDeDescuento));
+		}
+	}
+
 	// Metodos
 	public double calcularPrecio() {
 		return precioBase;

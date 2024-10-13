@@ -27,4 +27,12 @@ public class Calculadora {
 		}
 	}
 
+	public double calcularRaizCuadrada(int numero1) {
+		if (numero1 < 0) {
+			throw new IllegalArgumentException("No puede ingresar un número menor a 0.");
+		} else {
+			return Math.sqrt(numero1);
+		}
+	}
+
 }
