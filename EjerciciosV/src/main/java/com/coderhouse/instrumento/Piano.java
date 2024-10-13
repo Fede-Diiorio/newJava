@@ -2,15 +2,9 @@ package com.coderhouse.instrumento;
 
 public class Piano extends Instrumento {
 
-	// Atributos
-	private String tipoDePiano;
-
-	public String getTipoDePiano() {
-		return tipoDePiano;
-	}
-
-	public void setTipoDePiano(String tipoDePiano) {
-		this.tipoDePiano = tipoDePiano;
+	public Piano(String tipo, String marca) {
+		super(tipo, marca);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -19,6 +13,6 @@ public class Piano extends Instrumento {
 	}
 
 	public void tocar() {
-		System.out.println("El piano " + getTipoDePiano() + " está tocando una canzión de Beethoven.");
+		System.out.println(getTipo() + " está tocando una canzión de Beethoven.");
 	}
 }

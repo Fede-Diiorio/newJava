@@ -7,8 +7,22 @@ public class Libro {
 	// atributos
 	private String isbn;
 	private String titulo;
+	private String autor;
 
+	public Libro(String titulo, String autor) {
+		this.autor = autor;
+		this.titulo = titulo;
+	}
+	
 	// GET y SET
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+
 	public String getIsbn() {
 		return isbn;
 	}

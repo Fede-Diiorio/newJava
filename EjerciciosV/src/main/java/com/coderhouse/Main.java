@@ -22,20 +22,22 @@ public class Main {
 			System.out.println(test);
 		} catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
+		} finally {
+			System.out.println("Programa terminado!");
 		}
 
-		System.out.println("Factorial");
-		double testII = calc.calcularFactorial(5);
-		System.out.println(testII);
-		
-		System.out.println("");
-		System.out.println("Registro");
-		Registro registro = new Registro();
-		registro.agregar("registro1");
-		registro.agregar("registro2");
-		registro.agregar("registro3");
-		registro.obtenerElemento(0);
-		registro.obtenerElemento(5);
+//		System.out.println("Factorial");
+//		double testII = calc.calcularFactorial(5);
+//		System.out.println(testII);
+//		
+//		System.out.println("");
+//		System.out.println("Registro");
+//		Registro registro = new Registro();
+//		registro.agregar("registro1");
+//		registro.agregar("registro2");
+//		registro.agregar("registro3");
+//		registro.obtenerElemento(0);
+//		registro.obtenerElemento(5);
 
 	}
 

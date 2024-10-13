@@ -11,17 +11,33 @@ public class Producto {
 
 	private String mensajeDeError = "Tiene que ingresar un valor mayor a 0.";
 
+	public Producto(double precio, int codigo) {
+		validarPrecioBase(precio);
+		validarCodigo(codigo);
+		this.precioBase = precio;
+		this.codigo = codigo;
+	}
+
+	private void validarPrecioBase(double precio) {
+		if (precioBase <= 0) {
+			throw new IllegalArgumentException(mensajeDeError);
+		}
+	}
+
+	private void validarCodigo(int codigo) {
+		if (codigo <= 0) {
+			throw new IllegalArgumentException(mensajeDeError);
+		}
+	}
+
 	// GET y SET
 	public double getPrecioBase() {
 		return precioBase;
 	}
 
-	public void setPrecioBase(double precioBase) throws Exception {
-		if (precioBase <= 0) {
-			throw new Exception(mensajeDeError);
-		} else {
-			this.precioBase = precioBase;
-		}
+	public void setPrecioBase(double precioBase) {
+		validarPrecioBase(precioBase);
+		this.precioBase = precioBase;
 	}
 
 	public String getNombre() {
@@ -38,11 +54,8 @@ public class Producto {
 	}
 
 	public void setCodigo(int codigo) throws Exception {
-		if (codigo <= 0) {
-			throw new Exception(mensajeDeError);
-		} else {
-			this.codigo = codigo;
-		}
+		validarCodigo(codigo);
+		this.codigo = codigo;
 	}
 
 	public void aplicarDescuento(int porcentajeDeDescuento) {

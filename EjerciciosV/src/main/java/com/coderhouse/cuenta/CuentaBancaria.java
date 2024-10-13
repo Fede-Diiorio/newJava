@@ -10,6 +10,27 @@ public class CuentaBancaria {
 	private int numeroCuenta;
 
 	private static final String MENSAJE_ERROR_SALDO  = "No puede ingresar un número menor a 0.";
+	
+	public CuentaBancaria (double saldo, int numeroCuenta) {
+		validarSaldo(saldo);
+		validarNumeroCuenta(numeroCuenta);
+		this.saldo = saldo;
+		this.numeroCuenta = numeroCuenta;
+	}
+	
+	// Método privado para validar saldo
+	private void validarSaldo(double saldo) {
+	    if (saldo < 0) {
+	        throw new IllegalArgumentException(MENSAJE_ERROR_SALDO);
+	    }
+	}
+
+	// Método privado para validar número de cuenta
+	private void validarNumeroCuenta(int numeroCuenta) {
+	    if (numeroCuenta <= 0) {
+	        throw new IllegalArgumentException(MENSAJE_ERROR_SALDO);
+	    }
+	}
 
 	// GET y SET
 	public double getSaldo() {
@@ -17,11 +38,8 @@ public class CuentaBancaria {
 	}
 
 	public void setSaldo(double saldo) {
-		if (saldo < 0) {
-			throw new IllegalArgumentException(MENSAJE_ERROR_SALDO );
-		} else {
-			this.saldo = saldo;
-		}
+		validarSaldo(saldo);
+		this.saldo = saldo;
 	}
 
 	public int getNumeroCuenta() {
@@ -29,11 +47,8 @@ public class CuentaBancaria {
 	}
 
 	public void setNumeroCuenta(int numeroCuenta) {
-		if (numeroCuenta <= 0) {
-			throw new IllegalArgumentException(MENSAJE_ERROR_SALDO );
-		} else {
-			this.numeroCuenta = numeroCuenta;
-		}
+		validarNumeroCuenta(numeroCuenta);
+		this.numeroCuenta = numeroCuenta;
 	}
 
 	public String getTitular() {

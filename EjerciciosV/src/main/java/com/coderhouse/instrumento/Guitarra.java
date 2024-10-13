@@ -2,21 +2,14 @@ package com.coderhouse.instrumento;
 
 public class Guitarra extends Instrumento {
 
-	// Atributos
-	private String tipoDeGuitarra;
-
-	// GET y SET
-	public String getTipoDeGuitarra() {
-		return tipoDeGuitarra;
+	public Guitarra(String tipo, String marca) {
+		super(tipo, marca);
+		// TODO Auto-generated constructor stub
 	}
 
-	public void setTipoDeGuitarra(String tipoDeGuitarra) {
-		this.tipoDeGuitarra = tipoDeGuitarra;
-	}
 	// Métodos
-
 	@Override
 	public void tocar() {
-		System.out.println("La guitarra " + getTipoDeGuitarra() + " está tocando una sucesión de acordes.");
+		System.out.println("La guitarra " + getTipo() + " está tocando una sucesión de acordes.");
 	}
 }

@@ -2,6 +2,11 @@ package com.coderhouse.cuenta;
 
 public class CuentaAhorros extends CuentaBancaria {
 
+	public CuentaAhorros(double saldo, int numeroCuenta) {
+		super(saldo, numeroCuenta);
+		// TODO Auto-generated constructor stub
+	}
+
 	// Constantes
 	private static final int INTERES_NOMINAL_ANUAL = 16;
 

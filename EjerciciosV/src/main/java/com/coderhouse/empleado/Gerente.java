@@ -2,6 +2,11 @@ package com.coderhouse.empleado;
 
 public class Gerente extends Empleado {
 
+	public Gerente(String empleado, int sueldo) {
+		super(empleado, sueldo);
+		// TODO Auto-generated constructor stub
+	}
+
 	// Atributos
 	private double porcentajeDeBonificacion;
 	private float bonoDePremio;

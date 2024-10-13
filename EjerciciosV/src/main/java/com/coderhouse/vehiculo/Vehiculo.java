@@ -7,16 +7,49 @@ public class Vehiculo {
 	// Atributos
 	private String marca;
 	private String modelo;
+	private String color;
+	private int velocidad;
 	private int anio;
 	private String matricula;
 
+	public Vehiculo(String marca, String modelo, String color, int velocidad) {
+		validarVelocidad(velocidad);
+		this.marca = marca;
+		this.modelo = modelo;
+		this.color = color;
+		this.velocidad = velocidad;
+	}
+
 	// constantes
 	private static final int ANIO_ACTUAL = 2024;
+
+	private void validarVelocidad(int velocidad) {
+		if (velocidad < 0) {
+			throw new IllegalArgumentException("La velocidad tiene que ser superior a 0");
+		}
+	}
 
 	// Get y set
 
 	public String getMarca() {
 		return marca;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public int getVelocidad() {
+		return velocidad;
+	}
+
+	public void setVelocidad(int velocidad) {
+		validarVelocidad(velocidad);
+		this.velocidad = velocidad;
 	}
 
 	public String getMatricula() {

@@ -2,6 +2,12 @@ package com.coderhouse.vehiculo;
 
 public class Coche extends Vehiculo {
 
+
+	public Coche(String marca, String modelo, String color, int velocidad) {
+		super(marca, modelo, color, velocidad);
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public void arrancar() {
 		System.out.println("El coche está arrancando con su prorpio motor.");

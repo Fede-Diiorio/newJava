@@ -10,6 +10,15 @@ public class Persona {
 	private int dni;
 
 	private String mensajeDeError = "Tiene que ingresar un valor mayor a 0.";
+	
+	public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        if (edad < 0) {
+            throw new IllegalArgumentException(mensajeDeError);
+        } else {
+        	this.edad = edad;
+        }
+    }
 
 	// Get y Set
 	public String getNombre() {

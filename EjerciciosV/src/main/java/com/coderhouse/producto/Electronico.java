@@ -2,6 +2,11 @@ package com.coderhouse.producto;
 
 public class Electronico extends Producto {
 
+	public Electronico(double precio, int codigo) {
+		super(precio, codigo);
+		// TODO Auto-generated constructor stub
+	}
+
 	// Atributos
 	private int aniosGarantia;
 

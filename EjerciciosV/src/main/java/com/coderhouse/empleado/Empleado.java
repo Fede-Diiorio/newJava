@@ -6,6 +6,20 @@ public class Empleado {
 	private String empleado;
 	private int sueldo;
 
+	public Empleado(String empleado, int sueldo) {
+		validarSueldo(sueldo);
+		this.empleado = empleado;
+		this.sueldo = sueldo;
+				
+	}
+
+	private void validarSueldo(int sueldo) {
+		String error = "Tiene que ingresar un salario mayor a 0.";
+		if (sueldo <= 0) {
+			throw new IllegalArgumentException(error);
+		}
+	}
+
 	// GET y SET
 	public String getEmpleado() {
 		return empleado;
@@ -20,14 +34,10 @@ public class Empleado {
 	}
 
 	public void setSueldo(int sueldo) throws Exception {
-		String error = "Tiene que ingresar un salario mayor a 0.";
-		if (sueldo <= 0) {
-			throw new Exception(error);
-		} else {
-			this.sueldo = sueldo;
-		}
+		validarSueldo(sueldo);
+		this.sueldo = sueldo;
 	}
-	
+
 	public void trabajar() {
 		System.out.println(getEmpleado() + "está laburando como loco.");
 	}

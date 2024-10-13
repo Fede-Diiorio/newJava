@@ -4,6 +4,11 @@ import java.util.Objects;
 
 public class Estudiante extends Persona {
 
+	public Estudiante(String nombre, int edad) {
+		super(nombre, edad);
+		// TODO Auto-generated constructor stub
+	}
+
 	// Atributos
 	private int matricula;
 
