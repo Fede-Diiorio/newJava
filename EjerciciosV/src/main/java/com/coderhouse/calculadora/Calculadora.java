@@ -15,16 +15,13 @@ public class Calculadora {
 	}
 
 	public float dividir(int numero1, int numero2) {
-		try {
-			if (numero2 == 0) {
-				throw new ArithmeticException("No se puede dividir por cero.");
-			}
-			float resultado = (float) numero1 / numero2;
-			return resultado;
-		} catch (ArithmeticException e) {
-			System.out.println(e.getMessage());
-			return 0;
+
+		if (numero2 == 0) {
+			throw new ArithmeticException("No se puede dividir por cero.");
 		}
+		float resultado = (float) numero1 / numero2;
+		return resultado;
+
 	}
 
 	public double calcularRaizCuadrada(int numero1) {
@@ -35,4 +32,20 @@ public class Calculadora {
 		}
 	}
 
+	public double calcularFactorial(int factorial) {
+
+		if (factorial < 0) {
+			throw new IllegalArgumentException("El factorial debe ser un número positivo.");
+		} else {
+			int contador = 1;
+			
+			double factorialFinal = 1;
+			for (int i = 1; i <= factorial; i++) {
+				factorialFinal *= contador;
+				contador++;
+			}
+
+			return factorialFinal;
+		}
+	}
 }

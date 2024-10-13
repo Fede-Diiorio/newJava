@@ -26,4 +26,14 @@ public class Registro {
 	public void mostrarRegistros() {
 		System.out.println("Registros actuales: " + registros);
 	}
+
+	public void obtenerElemento(int indice) {
+		try {
+			String registro = registros.get(indice);
+			System.out.println("Registronico: " + registro);
+		} catch (IndexOutOfBoundsException e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
 }
