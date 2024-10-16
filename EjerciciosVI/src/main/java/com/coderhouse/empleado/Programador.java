@@ -1,9 +1,12 @@
 package com.coderhouse.empleado;
 
-public class programador extends Empleado {
+public class Programador extends Empleado {
 
-	public programador(String nombre, int salarioPorHora) {
-		super(nombre, salarioPorHora);
+
+
+	public Programador(String nombre, int salarioPorHora, int identificacion) {
+		super(nombre, salarioPorHora, identificacion);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override

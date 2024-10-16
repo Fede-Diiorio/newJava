@@ -47,7 +47,7 @@ public class Persona {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(edad);
+		return Objects.hash(edad, nombre);
 	}
 
 	@Override
@@ -59,8 +59,10 @@ public class Persona {
 		if (getClass() != obj.getClass())
 			return false;
 		Persona other = (Persona) obj;
-		return edad == other.edad;
+		return edad == other.edad && Objects.equals(nombre, other.nombre);
 	}
+
+	
     
     
 }

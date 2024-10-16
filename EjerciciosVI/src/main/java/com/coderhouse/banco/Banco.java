@@ -33,13 +33,28 @@ public class Banco {
 
 	// Methods
 	private void validarSaldo(double saldo) {
-		if(saldo < 0) {
+		if (saldo < 0) {
 			throw new IllegalArgumentException("No puede iniciar su cuenta con un saldo menor a 0.");
 		}
 	}
 
-	
 	public void crearCuenta() {
 		System.out.println("Cuenta creada");
 	}
+
+	public void transferir(double transferencia, String destinatario) {
+	    if (getSaldo() < transferencia) {
+	        throw new IllegalArgumentException("No cuenta con suficientes fondos para realizar esa transferencia.");
+	    }
+	    
+	    if (destinatario == null || destinatario.trim().isEmpty()) {
+	        throw new NullPointerException("Debe ingresar un destinatario válido para su transferencia.");
+	    }
+
+	    double nuevoSaldo = getSaldo() - transferencia;
+	    setSaldo(nuevoSaldo);
+
+	    System.out.println("Transferencia de " + transferencia + " enviada a: " + destinatario);
+	}
+
 }
