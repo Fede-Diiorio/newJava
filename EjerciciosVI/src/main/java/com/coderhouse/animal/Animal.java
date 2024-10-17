@@ -1,8 +1,6 @@
 package com.coderhouse.animal;
 
-public class Animal {
+public abstract class Animal {
 
-	public void hacerSonido() {
-		System.out.println("El animal está emitiendo un sonido.");
-	}
+	protected abstract void hacerSonido();
 }

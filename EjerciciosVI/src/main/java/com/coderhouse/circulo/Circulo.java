@@ -15,10 +15,11 @@ public class Circulo {
 		}
 	}
 
-	public void calcularArea(int radio) {
+	public double calcularArea(int radio) {
 		validarRadio(radio);
 		double resultado = NUMERO_PI * radio * radio;
 		System.out.println("El area del circulo es: " + resultado);
+		return resultado;
 	}
 	
 	public void calcularArea(double radio) {

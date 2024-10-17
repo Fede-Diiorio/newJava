@@ -1,6 +1,8 @@
 package com.coderhouse.instrumento;
 
-public class InstrumentoMusical {
+import com.coderhouse.interfaces.InstrumentoInterface;
+
+public class InstrumentoMusical implements InstrumentoInterface {
 
 	public void tocar() {
 		System.out.println("La música está sonando.");
